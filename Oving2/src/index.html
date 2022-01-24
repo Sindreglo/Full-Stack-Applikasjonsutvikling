@@ -2,9 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
+    <link rel = "stylesheet" href="./asserts/styles.css"/>
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
-$END$
+
+<header>
+  <div class="header">
+    <div>
+      <h1>Calculator</h1>
+    </div>
+    <div class="header-image">
+      <img
+              id="header-logo"
+              src="./asserts/images/calculator.png"
+              alt="calc_pic">
+    </div>
+  </div>
+</header>
+
+<main id = "app" class="main">
+  <div class="calculator">
+    <div class="result">{{ variable1 }}</div>
+    <button v-on:click= "C" class="button">C</button>
+    <button v-on:click= "ANS" class="button">ANS</button>
+    <button v-on:click= "DEL" class="button">DEL</button>
+    <button v-on:click= "addition" class="button">+</button>
+    <button v-on:click= "ONE" class="button">1</button>
+    <button v-on:click= "TWO" class="button">2</button>
+    <button v-on:click= "THREE" class="button">3</button>
+    <button v-on:click= "subtraction" class="button">-</button>
+    <button v-on:click= "FOUR" class="button">4</button>
+    <button v-on:click= "FIVE" class="button">5</button>
+    <button v-on:click= "SIX" class="button">6</button>
+    <button v-on:click= "multiplication" class="button">*</button>
+    <button v-on:click= "SEVEN" class="button">7</button>
+    <button v-on:click= "EIGHT" class="button">8</button>
+    <button v-on:click= "NINE" class="button">9</button>
+    <button v-on:click= "division" class="button">/</button>
+    <button class="button" disabled></button>
+    <button v-on:click= "ZERO" class="button">0</button>
+    <button v-on:click= "COMMA" class="button">.</button>
+    <button v-on:click= "equal" class="equal">=</button>
+  </div>
+  <div class="log">
+    <ul>
+      <li v-for= "logItem in log"> {{ logItem }}</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="footer">
+    <p> A Brilliant Website by Sindre Glomnes.</p>
+  </div>
+</footer>
+
+<script src="./main.js"></script>
+
+<script>
+  const mountedApp = app.mount("#app")
+</script>
+
 </body>
 </html>

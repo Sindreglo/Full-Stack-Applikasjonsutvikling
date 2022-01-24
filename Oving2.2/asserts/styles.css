@@ -1,32 +1,26 @@
 .header{
-    background: linear-gradient(to right, rgb(55, 126, 22) 20%, rgb(122, 211, 81) 100%);
-    
-
-    background-position:left right;
     font-family: Arial, fantasy;
     font-size: 20px;
     text-align: center;
-
+    border-bottom: 2px solid black;
 }
 
 #header-logo{
     height: 80px;
 }
 
-button{
+.main{
+    display: grid;
+    width: 100%;
+    grid-template-areas: "leftCalc calc rightCalc"
+    "leftCalc log rightCalc";
+    grid-template-columns: 40% 20% 40%;
+}
+
+.main button{
     font-family: Arial, fantasy;
     font-size: 20px;
     max-block-size: 60px;
-    border-radius: 5%;
-}
-
-.button{
-    background-color:rgb(187, 184, 184);
-}
-
-.equal{
-
-    background-color:rgb(122, 211, 81);
 }
 
 .main div{
@@ -35,13 +29,13 @@ button{
     text-align: center;
 }
 
+.leftCalc{grid-area: leftCalc}
+.rightCalc{grid-area: rightCalc}
+
 .calculator{
-    
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 50px;
     grid-area: calc;
-    border: 3px solid black;
+    border: 2px solid black;
     display: grid;
     height: 400px;
     width: 300px;
@@ -56,19 +50,15 @@ button{
 }
 
 .log{
-    margin-left: auto;
-    margin-right: auto;
     grid-area: log;
     margin-top: 20px;
-    min-height: 40px;
-    border: 3px solid black;
+    height: 100px;
+    border: 2px solid black;
     width: 300px;
 }
 
 .result{grid-area: result;
-margin-top: 40px;
-height: 40px;
-width: 300px;}
+margin-top: 40px}
 
 .C{grid-area: C;}
 .ANS{grid-area: ANS;}
