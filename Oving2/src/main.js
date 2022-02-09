@@ -8,107 +8,106 @@ const app = Vue.createApp({
         }
     },
     methods: {
-
         ONE(){ 
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += 1
         },
         TWO(){
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += 2
         },
         THREE(){ 
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += 3
         },
         FOUR(){ 
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += 4
         },
         FIVE(){ 
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += 5
         },
         SIX(){
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += 6
         },
         SEVEN(){
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += 7
         },
         EIGHT(){
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += 8
         },
         NINE(){
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += 9
         },
         ZERO(){
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += 0
         },
         COMMA(){
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += "."
         },
         addition(){
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += "+"            
         },
         subtraction(){
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += "-"        
         },
         multiplication(){
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 += "*"        
         },
         division(){
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
@@ -123,13 +122,12 @@ const app = Vue.createApp({
             this.reset = false
         },
         DEL(){
-            if(this.reset == true) {
+            if(this.reset) {
                 this.variable1 = ""
                 this.reset = false
             }
             this.variable1 = this.variable1.substring(0, this.variable1.length - 1);
         },
-
         equal() {
             this.sum = eval(this.variable1)
 
@@ -141,6 +139,5 @@ const app = Vue.createApp({
             this.reset = true
             
         }
-
     }
 })

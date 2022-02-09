@@ -1,12 +1,8 @@
 .header{
     background: linear-gradient(to right, rgb(55, 126, 22) 20%, rgb(122, 211, 81) 100%);
-    
-
-    background-position:left right;
     font-family: Arial, fantasy;
     font-size: 20px;
     text-align: center;
-
 }
 
 #header-logo{
@@ -25,7 +21,6 @@ button{
 }
 
 .equal{
-
     background-color:rgb(122, 211, 81);
 }
 
