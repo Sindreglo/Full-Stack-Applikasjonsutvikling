@@ -201,14 +201,6 @@ button{
   border-radius: 5%;
 }
 
-.button{
-  background-color:rgb(187, 184, 184);
-}
-
-.equal{
-  background-color:rgb(122, 211, 81);
-}
-
 .main div{
   font-family: Arial, fantasy;
   font-size: 20px;
