@@ -17,7 +17,7 @@ export default createStore({
     }
   },
   actions: {
-    register({ commit }, user) {
+    register({commit}, user) {
       commit('REGISTER', user)
     }
   },
