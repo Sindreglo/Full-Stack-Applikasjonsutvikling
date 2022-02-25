@@ -13,7 +13,7 @@
         <label>Epost</label>
         <input
           v-model="epost"
-          type="text"
+          type="epost"
           placeholder="epost"
         />
         <label>Melding</label>

@@ -7,20 +7,17 @@
     <div id="input_field">
       <div class="form-group">
         <label>Username:</label>
-        <input
-            v-model="username"
-            />
+        <input v-model="username" />
       </div>
       <div class="form-group">
         <label>Password:</label>
-        <input
-            v-model="password"
-            type="password"/>
-
+        <input v-model="password" type="password" />
       </div>
       <button>Sign in</button>
     </div>
-    <p v-if="failed">Not registered yet! <router-link to="/register">Register</router-link></p>
+    <p v-if="failed">
+      Not registered yet! <router-link to="/register">Register</router-link>
+    </p>
   </form>
 </template>
 
@@ -51,9 +48,8 @@ export default {
 </script>
 
 <style>
-
 form {
-  background-color: #FFF;
+  background-color: #fff;
   height: 600px;
   width: 600px;
   margin-right: auto;
@@ -72,8 +68,8 @@ label {
   margin-top: 20px;
   margin-left: 10px;
   text-align: right;
-  margin-right:15px;
-  float:left;
+  margin-right: 15px;
+  float: left;
 }
 input {
   height: 20px;
@@ -82,12 +78,10 @@ input {
   margin-top: 20px;
 }
 
-
 button {
   margin-top: 20px;
   margin-left: 30%;
   padding: 5px 30px 5px 30px;
   font-size: 18px;
 }
-
 </style>

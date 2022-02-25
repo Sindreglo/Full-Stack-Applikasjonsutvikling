@@ -7,35 +7,35 @@
     <div id="input_field2">
       <div class="form-group">
         <label>Full name:</label>
-        <input v-model="user.name" />
+        <input data-testid="inputName" v-model="user.name" />
       </div>
 
       <div class="form-group">
         <label>Address:</label>
-        <input v-model="user.address" />
+        <input data-testid="inputAddress" v-model="user.address" />
       </div>
 
       <div class="form-group">
         <label>Username:</label>
-        <input v-model="user.username" />
+        <input data-testid="inputUsername" v-model="user.username" />
       </div>
 
       <div class="form-group">
         <label>Password:</label>
-        <input v-model="user.password" />
+        <input data-testid="inputPassword" v-model="user.password" />
       </div>
 
       <div class="form-group">
         <label>Email:</label>
-        <input v-model="user.email" type="email" />
+        <input data-testid="inputEmail" v-model="user.email" type="email" />
       </div>
 
       <div class="form-group">
         <label>Phone:</label>
-        <input v-model="user.phone" />
+        <input data-testid="inputPhone" v-model="user.phone" />
       </div>
 
-      <button>Register</button>
+      <button :disabled="user.username === '' && user.password === ''" type="submit">Register</button>
     </div>
   </form>
 </template>

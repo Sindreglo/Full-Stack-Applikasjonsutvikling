@@ -1,42 +1,23 @@
 <template>
   <div class="about">
-    <h1>Register yourself!</h1>
+    <h1>Please Login</h1>
   </div>
 
   <form @submit.prevent="onSubmit">
-    <div id="input_field2">
-      <div class="form-group">
-        <label>Full name:</label>
-        <input v-model="user.name" />
-      </div>
-
-      <div class="form-group">
-        <label>Address:</label>
-        <input v-model="user.address" />
-      </div>
-
+    <div id="input_field">
       <div class="form-group">
         <label>Username:</label>
-        <input v-model="user.username" />
+        <input data-testid="inputName" v-model="username" />
       </div>
-
       <div class="form-group">
         <label>Password:</label>
-        <input v-model="user.password" />
+        <input data-testid="inputPassword" v-model="password" type="password" />
       </div>
-
-      <div class="form-group">
-        <label>Email:</label>
-        <input v-model="user.email" type="email" />
-      </div>
-
-      <div class="form-group">
-        <label>Phone:</label>
-        <input v-model="user.phone" />
-      </div>
-
-      <button>Register</button>
+      <button>Sign in</button>
     </div>
+    <p v-show="failed">
+      Not registered yet! <router-link to="/register">Register</router-link>
+    </p>
   </form>
 </template>
 
@@ -44,22 +25,23 @@
 export default {
   data() {
     return {
-      user: {
-        name: '',
-        address: '',
-        username: '',
-        password: '',
-        email: '',
-        phone: ''
-      }
+      username: '',
+      password: '',
+      failed: false
     }
   },
   methods: {
     onSubmit() {
-      this.$store.dispatch('register', this.user)
-      this.$router.push({
-        name: 'Login'
-      })
+      if (
+        this.$store.getters.getUsername === this.username &&
+        this.$store.getters.getPassword === this.password
+      ) {
+        this.$router.push({
+          name: 'Home'
+        })
+      } else {
+        this.failed = true
+      }
     }
   }
 }
