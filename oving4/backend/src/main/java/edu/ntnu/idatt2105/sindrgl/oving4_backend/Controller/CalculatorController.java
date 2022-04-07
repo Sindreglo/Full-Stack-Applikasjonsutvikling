@@ -21,11 +21,7 @@ public class CalculatorController {
     @PostMapping("/calculation")
     public Calculation postCalculation(@RequestBody Calculation calculation){
 
-        logger.trace("ermahgerd trers");
-        logger.debug("ermahgerd derberg");
-        logger.info("ermahgerd ernferh");
-        logger.warn("ermahgerd wern");
-        logger.error("ermahgerd ehrrerr");
+        logger.trace("PostMapping");
 
         return calculatorService.calculate(calculation);
     }
